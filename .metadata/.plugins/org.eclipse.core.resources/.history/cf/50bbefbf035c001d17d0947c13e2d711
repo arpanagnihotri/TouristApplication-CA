@@ -1,0 +1,11 @@
+spring.datasource.url = jdbc:mysql://localhost:3306/touristdb
+server.port=9950
+spring.datasource.username = root
+spring.datasource.password = root
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.data.jpa.repositories.enabled=true
+spring.jpa.hibernate.ddl-auto = update
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+spring.application.name=tourist-service
+eureka.instance.hostname=localhost
+

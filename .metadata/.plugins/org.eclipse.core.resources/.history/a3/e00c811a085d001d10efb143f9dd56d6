@@ -1,0 +1,28 @@
+package com.tourist;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.tourist.model.Tourist;
+import com.tourist.repository.TouristRepository;
+
+@SpringBootTest
+class TouristBackendServiceApplicationTests {
+	
+	@Autowired
+	TouristRepository trepo;
+	
+	public void testAdd() {
+		Tourist t=new Tourist();
+		t.setId(1671L);
+		t.setFirstname("Tanu");
+		t.setLastname("Mishra");
+		t.setGender("Female");
+		t.setAge(24);
+		t.setFromplace("Meerut");
+		t.setVisitdays(4);
+		trepo.save(t);
+	}
+
+}

@@ -1,0 +1,11 @@
+spring.application.name=Api-Gateway
+server.port=8999
+spring.main.web-application-type=reactive 
+eureka.client.fetch-registry=true
+eureka.client.register-with-eureka=true
+eureka.instance.hostname=localhost
+
+spring.cloud.gateway.routes[0].id=studentinfo-backend
+spring.cloud.gateway.routes[0].uri=lb://studentinfo-backend
+spring.cloud.gateway.routes[0].predicates[0]=Path=/api/v1/**
+

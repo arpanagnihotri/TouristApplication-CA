@@ -1,0 +1,5 @@
+package com.tourist;
+
+public class TouristServiceControllerTest extends AbstractTest {
+
+}

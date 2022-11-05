@@ -1,0 +1,29 @@
+package com.tourist.service;
+
+import java.util.Collections;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tourist.model.Tourist;
+import com.tourist.repository.TouristRepository;
+
+@Service
+public class TouristServiceImpl implements TouristService{
+
+	@Autowired
+	private TouristRepository tr;
+	
+	@Override
+	public List<Tourist> getAllTourist() {
+		return Collections.sort(List<Tourist>)tr.findAll());
+	}
+
+	@Override
+	public Tourist addTourist(Tourist tourist) {
+		return tr.save(tourist);
+	}
+	
+	
+}

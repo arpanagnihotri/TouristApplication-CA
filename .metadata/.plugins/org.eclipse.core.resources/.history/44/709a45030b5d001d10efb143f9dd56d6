@@ -1,0 +1,24 @@
+package com.tourist;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.tourist.model.Tourist;
+import com.tourist.repository.TouristRepository;
+
+@SpringBootTest
+class TouristBackendServiceApplicationTests {
+	
+	@Autowired
+	TouristRepository trepo;
+	
+	public List<Tourist> testgetAll() {
+		List<Tourist> list=(List<Tourist>) trepo.findAll();
+		asserThat(list).size();
+		
+	}
+
+}

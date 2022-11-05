@@ -1,0 +1,5 @@
+package com.tourist.model;
+
+public class Tourist {
+
+}

@@ -1,0 +1,5 @@
+package com.tourist.repository;
+
+public interface TouristRepository extends CrudRepository<Tourist,Long> {
+
+}

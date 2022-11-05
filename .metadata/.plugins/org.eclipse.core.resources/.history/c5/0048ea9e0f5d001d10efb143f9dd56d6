@@ -1,0 +1,29 @@
+package com.tourist;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import com.tourist.model.Tourist;
+import com.tourist.repository.TouristRepository;
+
+
+@DataJpaTest
+public class TouristRepositoryTests {
+	
+	@Autowired
+	private TouristRepository trepo;
+	
+	@Test
+	public void saveTouristTest() {
+		Tourist t=Tourist.builder()
+				.id(1043L)
+				.firstname("Tanu")
+				.lastname("Mishra")
+				.gender("Male")
+				.age(23)
+				.fromplace("Meerut")
+				.visitdays(2)
+				.build();
+	}
+}
